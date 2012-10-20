@@ -1,0 +1,15 @@
+parameters:
+    database_driver:   pdo_pgsql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     test_project
+    database_user:     postgres
+    database_password: postgres
+
+    mailer_transport:  smtp
+    mailer_host:       localhost
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
