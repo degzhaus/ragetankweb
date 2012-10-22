@@ -2202,7 +2202,7 @@ hr.styled-hr {
  #navigation{width: 740px; float:right; margin:-1px 0px 0 0; background:none; font-weight: normal;}
  #navigation a{display:inline-block; text-decoration:none; padding:0 23px; height:120px; line-height:91px; background:url('/bundles/ragetankauth/images/theme/mainNav.png?923542') no-repeat -9999px -9999px}
  #navigation a:hover, #active a{background-repeat:repeat-x; background-position:0 100%; }
- #navigation ul{margin:0px 0px 0px 200px; list-style:none; background:url('/bundles/ragetankauth/images/theme/bullet-wsite-menu.png?923542') no-repeat -9999px -9999px}
+ #navigation ul{margin:0px 0px 0px 200px; list-style:none; }
  #navigation li{float:left}
  #navigation ul li.weebly-nav-more{background:none}
  #wsite-menus .wsite-menu-wrap{z-index:5000; background:url('/bundles/ragetankauth/images/theme/wsite-menu.png?923542'); margin-top:0px; position:absolute; top:65px; left:70%; margin: -14px 0px; background-color: #0d0d0d;}
@@ -2210,7 +2210,7 @@ hr.styled-hr {
  #wsite-menus .wsite-menu{padding:0; margin:0; list-style:none; border-top:1px dotted #5f5f5f}
  #wsite-menus .wsite-menu li{float:left; clear:left; width:180px; text-align:left; border-bottom:1px dotted #5f5f5f}
  #wsite-menus span.wsite-menu-title{display:inline; padding:0}
- #wsite-menus .wsite-menu li a{font:12px Arial,sans-serif; width:162px; color:#fff; text-decoration:none; border:0 none; display:block; background:url('/bundles/ragetankauth/images/theme/bullet-wsite-menu.png?923542') no-repeat 10px 50%; font-weight:normal; line-height:1; padding:10px 6px 12px 12px;}
+ #wsite-menus .wsite-menu li a{font:12px Arial,sans-serif; width:162px; color:#fff; text-decoration:none; border:0 none; display:block; font-weight:normal; line-height:1; padding:10px 6px 12px 12px;}
  .contentTop{ height:14px; overflow:hidden; background:url('/bundles/ragetankauth/images/theme/contentTop.png?923542') repeat-x; margin-top:-6px; }
  .space{ height: 95px; }
  .content{ background:url('/bundles/ragetankauth/images/theme/bodybg.jpg?923542'); min-height:400px; padding-top:25px; padding-bottom:30px; }

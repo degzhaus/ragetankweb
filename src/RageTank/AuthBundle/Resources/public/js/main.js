@@ -9,5 +9,28 @@
                 $(element).attr('id','active');
             }
         });
+        $("#ask_form").submit(function(){
+            var data = {
+                name: $("#input-ask-name").val(),
+                email: $("#input-ask-email").val(),
+                question: $("#input-ask-question").val()
+            };
+            $.ajax({
+                url: '/ask',
+                type: 'POST',
+                data: data,
+                dataType: 'json',
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log("error! ", jqXHR, textStatus, errorThrown);
+                },
+                success: function(data, textStatus, jqXHR) {
+                    console.log("success! ", data, textStatus, jqXHR);
+                }
+            });
+            return false;
+        });
+        $("#ask_submit").click(function(){
+            $("#ask_form").submit();
+        });
     });
 })(jQuery);

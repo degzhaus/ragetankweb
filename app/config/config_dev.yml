@@ -11,9 +11,13 @@ web_profiler:
 
 monolog:
     handlers:
+        syslog:
+            type: stream
+            path: /var/log/symfony.log
+            level: error
         main:
             type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
+            path:  /var/log/error.log
             level: debug
         firephp:
             type:  firephp

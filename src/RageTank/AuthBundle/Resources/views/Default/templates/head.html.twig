@@ -27,7 +27,6 @@
 
 {% javascripts 
     '@RageTankAuthBundle/Resources/public/js/jquery.js'
-    '@RageTankAuthBundle/Resources/public/js/utilities-jq.js'
     '@RageTankAuthBundle/Resources/public/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
@@ -50,27 +49,6 @@
 	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='');
 }
 </style>
-
-<script type="text/javascript"><!--
-var STATIC_BASE = 'http://cdn1.editmysite.com/';
-var STYLE_PREFIX = 'wsite';
-//-->
-</script>
-
-<script type="text/javascript"><!--
-var DISABLE_NAV_MORE=1;
-(function(jQuery){
-function initFlyouts(){initPublishedFlyoutMenus([{"id":"318732337279959174","title":"Mobile App","url":"index.html"},{"id":"964847761119005035","title":"Sign-up","url":"sign-up.html"},{"id":"712239480440899801","title":"Blog","url":"blog.html"},{"id":"161174906875362366","title":"Social","url":"social.html"}],'318732337279959174',"<li class='wsite-nav-more'><a href='#'>more...<\/a><\/li>",'active',false)}
-if (jQuery) {
-if (jQuery.browser.msie) window.onload = initFlyouts;
-else jQuery(initFlyouts)
-}else{
-if (Prototype.Browser.IE) window.onload = initFlyouts;
-else document.observe('dom:loaded', initFlyouts);
-}
-})(window._W && _W.jQuery)
-//-->
-</script>
 </head>
 <body class="wsite-theme-light tall-header wsite-page-index">
 <div class="design"> Copyright © 2012, Rage Tank, Inc. All rights reserved.</div>
