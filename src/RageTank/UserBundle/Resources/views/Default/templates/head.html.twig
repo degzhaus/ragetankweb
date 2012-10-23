@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Rage Tank Mobile App - Mobile App</title>
+<meta name="description" content="How Fast Can You Go? Prove it.">
+<meta name="keywords" content="ragetank,rage,tank,mobile,app,gps,locate,race tracks,USA,Canada,turns, sectors,maps,data,driving,airplane-mode,accuracy,1m,0.01sec,timing,driver lines,turn-by-turn,AIM,Motec,time,Lap,Counter,Current,Lap Time,Predicted Lap Time,Speed,analyzing,facebook,G,t">
+<meta property="og:site_name" content="Rage Tank Mobile App">
+<meta property="og:title" content="Rage Tank Mobile App">
+<meta property="og:description" content="How Fast Can You Go? Prove it.">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/1347041402.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/4951453_orig.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/2251741_orig.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/8280175_orig.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/5113700.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/5823039_orig.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/1559254_orig.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/7115541_orig.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/3324252.png">
+<meta property="og:image" content="http://www.ragetank.com/uploads/5/7/2/9/5729322/1879052_orig.png">
+<meta property="og:url" content="http://www.ragetank.com/">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--[if lt IE 7]> <style>#content{height:400px !important;}</style><![endif]-->
+
+{% stylesheets '@RageTankUserBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% javascripts 
+    '@RageTankUserBundle/Resources/public/js/jquery.js'
+    '@RageTankUserBundle/Resources/public/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<style type="text/css">
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, .blog-sidebar div.paragraph, .blog-sidebar p, .wsite-form-field label, .wsite-form-field label {font-family:'PT Sans' !important;font-size:20px !important;line-height:30px !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:'PT Sans' !important;color:#990000 !important;}
+#wsite-title{}
+#wsite-content a:link, .blog-sidebar a:link{color:#990000 !important;}
+#wsite-content a:visited, .blog-sidebar a:visited{color:#990000 !important;}
+#wsite-content a:hover, .blog-sidebar a:hover{color:#CC0000 !important;}
+</style>
+<style type="text/css">
+.wsite-header {
+	background-image: url({{ asset('/bundles/ragetankuser/images/theme/1347140563.png') }}) !important;
+	background-position: 0 0 !important;
+}
+.wsite-header {
+	_background-image: none !important;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='');
+}
+</style>
+</head>
+<body class="wsite-theme-light tall-header wsite-page-index">
+<div class="design"> Copyright © 2012, Rage Tank, Inc. All rights reserved.</div>
+<div id="container">
+    <div id="header">
+        <div class="navContainer">
+            <div class="frame clearfix">
+				<div id="logo"><span class="wsite-logo"><a href="http://www.ragetank.com/"><img src="{{ asset('/bundles/ragetankuser/images/1347041402.png') }}" style="max-width:600px;max-height:100px;"></a></span></div>
+                <div id="navigation">
+                    <ul>
+                        <li class="wsite-nav-0" style="position: relative;" id="nav_home"><a style="position: relative;" href="/">Mobile App</a></li>
+                        <li class="wsite-nav-1" style="position: relative;" id="nav_sign-up"><a style="position: relative;" href="/sign-up">Sign-up</a></li>
+                        <li class="wsite-nav-2" style="position: relative;" id="nav_blog"><a style="position: relative;" href="/blog">Blog</a></li>
+                        <li class="wsite-nav-3" style="position: relative;" id="nav_social"><a style="position: relative;" href="/social">Social</a></li>
+                        {% if is_granted('ROLE_USER') %}
+                            <li class="wsite-nav-4" style="position: relative;" id="nav_logout"><a style="position: relative;" href="/login">Logout</a></li>
+                        {% else %}
+                            <li class="wsite-nav-4" style="position: relative;" id="nav_login"><a style="position: relative;" href="/login">Login</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>

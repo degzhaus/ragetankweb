@@ -21,7 +21,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new RageTank\AuthBundle\RageTankAuthBundle()
+            new RageTank\UserBundle\RageTankUserBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
