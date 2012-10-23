@@ -6,10 +6,10 @@ parameters:
     database_user:     postgres
     database_password: postgres
 
-    mailer_transport:  smtp
+    mailer_transport:  gmail
     mailer_host:       localhost
-    mailer_user:       ~
-    mailer_password:   ~
+    mailer_user:       ragetankrobot@gmail.com
+    mailer_password:   R@g3+anX
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt

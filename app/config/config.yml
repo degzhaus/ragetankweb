@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: services.yml }
 
 framework:
     #esi:             ~
@@ -40,6 +41,15 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: unsecured_area
     user_class: RageTank\UserBundle\Entity\User
+    from_email:
+        address:        rageadmin@ragetank.com
+        sender_name:    RageTank Admin
+    registration:
+        confirmation:
+            enabled:    true
+        form:
+            type: ragetank_user_registration
+            handler: ragetank_user.form.handler.registration
 
 # Doctrine Configuration
 doctrine:

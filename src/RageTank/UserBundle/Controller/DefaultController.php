@@ -41,6 +41,25 @@ class DefaultController extends Controller
         $user = $this->getUser();
         return array();
     }
+    
+    /**
+     * @Route("/email")
+     * @Template("RageTankUserBundle:Default:pages/home.html.twig")
+     */
+    public function emailAction()
+    {
+        $name = 'John' ;
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Hello Email')
+            ->setFrom('send@example.com')
+            ->setTo('johnbdegner@yahoo.com')
+            ->setBody($this->renderView('RageTankUserBundle:Default:emails/activation.txt.twig', array('name' => $name)))
+        ;
+        $this->get('mailer')->send($message);
+
+        return array();
+    }
+    
 
     /**
      * @Route("/admin/")
@@ -61,7 +80,6 @@ class DefaultController extends Controller
     {
         $request  = $this->get('request');
         $em       = $this->getDoctrine()->getEntityManager();
-        $logger   = $this->get('logger');
 
         $params = array(
             'name'     => $request->request->get('name'),
