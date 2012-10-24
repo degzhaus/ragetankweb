@@ -25,6 +25,7 @@
                 },
                 success: function(data, textStatus, jqXHR) {
                     console.log("success! ", data, textStatus, jqXHR);
+                    $("#ask_form").html('<div id="658244634280571966-msg" style="">Thank you. Your information has been submitted.</div>');
                 }
             });
             return false;
