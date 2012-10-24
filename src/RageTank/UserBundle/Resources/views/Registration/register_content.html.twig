@@ -1,4 +1,101 @@
+<style type="text/css">
+    .clear {
+        clear: both;
+    }
+    .fos_user_registration_register {
+        width: 780px;
+        height: 100%;
+    }
+    .fos_user_registration_register .left {
+        float: left;
+        text-align: left;
+    }
+    .fos_user_registration_register .right {
+        float: right;
+        text-align: right;
+    }
+    .fos_user_registration_register tr td label {
+        text-align: left;
+        display: block;
+        font-family: 'PT Sans' !important;
+        font-size: 20px !important;
+        line-height: 30px !important;
+    }
+    .fos_user_registration_register tr td input, .fos_user_registration_register tr td textarea {
+        text-align: left;
+        display: block;
+        width: 340px;
+    }
+    .comment {
+        height: 94%;
+    }
+    .mobile_apps, .undesired_features, .desired_features, .days_year {
+        height: 60px;
+    }
+</style>
 <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+    <table>
+        <tr>
+            <td>
+                {{ form_label(form.username) }}
+                {{ form_errors(form.username) }}
+                {{ form_widget(form.username, { 'attr': {'class': 'username'} }) }}
+            </td>
+            <td>
+                {{ form_label(form.email) }}
+                {{ form_errors(form.email) }}
+                {{ form_widget(form.email, { 'attr': {'class': 'email'} }) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.first_name) }}
+                {{ form_errors(form.first_name) }}
+                {{ form_widget(form.first_name) }}
+            </td>
+            <td>
+                {{ form_label(form.last_name) }}
+                {{ form_errors(form.last_name) }}
+                {{ form_widget(form.last_name) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.plainPassword.first) }}
+                {{ form_errors(form.plainPassword.first) }}
+                {{ form_widget(form.plainPassword.first) }}
+            </td>
+            <td>
+                {{ form_label(form.plainPassword.second) }}
+                {{ form_errors(form.plainPassword.second) }}
+                {{ form_widget(form.plainPassword.second) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.registration_response.comment) }}
+                {{ form_errors(form.registration_response.comment) }}
+                {{ form_widget(form.registration_response.comment, { 'attr': {'class': 'comment'} }) }}
+            </td>
+            <td>
+                {{ form_label(form.registration_response.mobile_apps, 'What other mobile apps do you use for timing and track position?') }}
+                {{ form_errors(form.registration_response.mobile_apps) }}
+                {{ form_widget(form.registration_response.mobile_apps, { 'attr': {'class': 'mobile_apps'} }) }}
+                
+                {{ form_label(form.registration_response.undesired_features, 'Most hated feature about that app?') }}
+                {{ form_errors(form.registration_response.undesired_features) }}
+                {{ form_widget(form.registration_response.undesired_features, { 'attr': {'class': 'undesired_features'} }) }}
+
+                {{ form_label(form.registration_response.desired_features, 'Most desired feature in a mobile track app like RageTank?') }}
+                {{ form_errors(form.registration_response.desired_features) }}
+                {{ form_widget(form.registration_response.desired_features, { 'attr': {'class': 'desired_features'} }) }}
+
+                {{ form_label(form.registration_response.days_year, 'How many days a year do you race at the track?') }}
+                {{ form_errors(form.registration_response.days_year) }}
+                {{ form_widget(form.registration_response.days_year, { 'attr': {'class': 'days_year'} }) }}
+            </td>
+        </tr>
+    </table>
     {{ form_widget(form) }}
     <div>
         <input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
